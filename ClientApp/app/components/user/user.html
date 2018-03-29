@@ -1,0 +1,26 @@
+<template>
+        <div class="container-fluid">
+                <div class = "row">
+                        
+                    <div class="panel panel-default">
+                        <div class="col-md-2">
+                            <div class="panel-body"><Button class="btn btn-primary btn-block" click.trigger="getValues()" disabled.bind="busy">Get Values <i class="fa fa-spinner fa-spin" show.bind="busy"></i></i></Button></div>
+                        </div>
+                        <div class="col-md-10">
+                            <div class="panel-body"><pre class="api-response">${Values}</pre></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="panel panel-default">
+                        <div class="col-md-2">
+                            <div class="panel-body"><Button class="btn btn-primary btn-block" click.trigger="getDetails()" disabled.bind="busy">Get token  <i class="fa fa-spinner fa-spin" show.bind="busy"></i></i></Button></div>
+                        </div>
+                        <div class="col-md-10">
+                            <div class="panel-body"><pre class="api-response">${UserDetails}</pre></div>
+                        </div>
+                    </div>
+
+               </div>
+        </div>
+</template>

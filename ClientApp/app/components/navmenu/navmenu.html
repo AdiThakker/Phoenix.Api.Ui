@@ -1,0 +1,27 @@
+<template bindable="router">
+  <require from="../user-authorization/user-authorization"></require>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand" href="#">Phoenix Api</a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li repeat.for = "row of router.navigation" class="${ row.isActive ? 'link-active' : '' }" >
+                    <a href.bind = "row.href">
+                        <span class="glyphicon glyphicon-${ row.settings.icon }"></span> ${ row.title }
+                    </a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <user-authorization></user-authorization>
+            </ul>
+          </div>
+        </div>
+    </nav>
+</template>

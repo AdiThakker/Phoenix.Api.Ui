@@ -1,0 +1,4 @@
+<template>    
+        <li><div class.bind = "isAuthenticated ?  'hidden' : ''" style="padding-top:10px"><Button class="btn-link" click.delegate ="login()"><span class="glyphicon glyphicon-log-in"></span> Sign In</Button></div></li>
+        <li><div class.bind = "!isAuthenticated ?  'hidden' : ''" style="padding-top:10px"><Button class="btn-link" click.delegate ="logout()"><span class="glyphicon glyphicon-log-out"></span> Sign Out</Button></div></li>
+</template>
